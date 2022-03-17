@@ -1,0 +1,47 @@
+import styles from '../styles/footer.module.css';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.content}>
+        <div className={styles.inner}>
+          <section className={styles.about}>
+            <h3>Have Questions ?</h3>
+            <p>Get in touch with us today through phone or email.</p>
+            <ul className={styles.actions}>
+              <li><a href="/" className={styles.button}>More Info</a></li>
+            </ul>
+          </section>
+          <ul className={[styles.icons, styles.bulleted].join(" ")}>
+            <li>
+              <div className={styles.iconContainer}>
+                <FacebookIcon sx={{ fontSize: 60 }} />
+                <InstagramIcon sx={{ fontSize: 60 }} />
+                <TwitterIcon sx={{ fontSize: 60 }} />
+                <LinkedInIcon sx={{ fontSize: 60 }} />
+              </div>
+            </li>
+          </ul>
+          <ul className={[styles.icons, styles.bulleted].join(" ")}>
+            <li>
+              <h3 className={styles.icon_header}>Phone</h3>
+              <p className={styles.close_footer}>(000) 000-0000</p>
+            </li>
+            <li>
+              <h3 className={styles.icon_header}>Email</h3>
+              <p className={styles.close_footer}><a href="/">information@untitled.tld</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p className={styles.copyright}>&copy; Ensured Employment Services. All rights reserved.</p>
+      <p className={styles.links}><a href="/">Terms of Use</a> | <a href="/">Privacy Policy</a></p>
+    </footer>
+  )
+}
+
+export default Footer;
