@@ -1,5 +1,6 @@
 import styles from '../styles/topbar.module.css';
 import { Link } from "react-router-dom";
+import logo from '../images/eeLogo.png';
 
 const TopBar = ({ type, button }) => {
   return (
@@ -7,7 +8,10 @@ const TopBar = ({ type, button }) => {
       {type === 1 ? (
         <>
           <header className={styles.topbar_header}>
-            <h1><Link to="/">Ensured Employement Services</Link></h1>
+            <h1 className={styles.logo}>
+              <img src={logo} alt="logo" className={styles.logo} />
+              <Link to="/">Ensured Employement Services</Link>
+            </h1>
             <nav>
               <ul>
                 <li><Link to="/">Home</Link></li>
@@ -20,7 +24,10 @@ const TopBar = ({ type, button }) => {
       ) : type === 2 ? (
         <>
           <header className={[styles.topbar_header, styles.topbar_header_alt].join(" ")}>
-            <h1><Link to="/">Ensured Employement Services</Link></h1>
+          <h1 className={styles.logo}>
+              <img src={logo} alt="logo" className={styles.logo} />
+              <Link to="/">Ensured Employement Services</Link>
+            </h1>
             <nav>
               <ul>
                 <li><Link to="/">Home</Link></li>

@@ -19,6 +19,10 @@
 	text-decoration: none;
 }
 
+.logo {
+	padding: 10px 20px 10px 10px;
+}
+
 .topbar_header h1 {
 	text-decoration: none;
 	color: #ffffff;
@@ -26,6 +30,8 @@
 	height: inherit;
 	line-height: inherit;
 	margin-left: 1.5em;
+	display: flex;
+	vertical-align: middle;
 }
 
 .topbar_header nav {
@@ -112,10 +118,15 @@
 	.topbar_header {
 		height: 3em;
 		line-height: 2.95em;
+		background: #2f373f;
 	}
 
 	.topbar_header h1:before {
 		font-size: 0.8em;
+	}
+
+	.logo {
+		padding: 1px 10px 1px 1px;
 	}
 }
 
