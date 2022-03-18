@@ -1,7 +1,7 @@
 import styles from '../styles/topbar.module.css';
 import { Link } from "react-router-dom";
 
-const TopBar = ({ type }) => {
+const TopBar = ({ type, button }) => {
   return (
     <>
       {type === 1 ? (
@@ -12,7 +12,7 @@ const TopBar = ({ type }) => {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
-                <li><a href="/" className={styles.button}>Apply Now</a></li>
+                <li><Link to="/seek-work" className={styles.button}>Apply Now</Link></li>
               </ul>
             </nav>
           </header>
@@ -25,7 +25,16 @@ const TopBar = ({ type }) => {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
-                <li><a href="/" className={styles.button}>Apply Now</a></li>
+                {button === 'seek' ? (
+                  <>
+                    <li><Link to="/seek-work" className={styles.button}>Apply Now</Link></li>
+                  </>
+                ) : button === 'hire' ? (
+                  <>
+                    <li><Link to="/seek-workers" className={styles.button}>Looking to Hire</Link></li>
+                  </>
+                ) : null}
+                <></>
               </ul>
             </nav>
           </header>

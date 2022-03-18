@@ -1,4 +1,5 @@
 import styles from '../styles/footer.module.css';
+import { Link } from "react-router-dom";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -12,9 +13,6 @@ const Footer = () => {
           <section className={styles.about}>
             <h3>Have Questions ?</h3>
             <p>Get in touch with us today through phone or email.</p>
-            <ul className={styles.actions}>
-              <li><a href="/" className={styles.button}>More Info</a></li>
-            </ul>
           </section>
           <ul className={[styles.icons, styles.bulleted].join(" ")}>
             <li>
@@ -33,13 +31,13 @@ const Footer = () => {
             </li>
             <li>
               <h3 className={styles.icon_header}>Email</h3>
-              <p className={styles.close_footer}><a href="/">information@untitled.tld</a></p>
+              <p className={styles.close_footer}><a href="mailto:ensuredsmploymentservices@gmail.com">ensuredsmploymentservices@gmail.com</a></p>
             </li>
           </ul>
         </div>
       </div>
       <p className={styles.copyright}>&copy; Ensured Employment Services. All rights reserved.</p>
-      <p className={styles.links}><a href="/">Terms of Use</a> | <a href="/">Privacy Policy</a></p>
+      <p className={styles.links}><a>Terms of Use</a> | <a>Privacy Policy</a></p>
     </footer>
   )
 }

@@ -1,15 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout';
 import TopBar from '../components/topbar';
-import AboutContent from '../components/aboutContent';
+import SeekForms from '../components/seekForms';
 import Footer from '../components/footer';
 
-const AboutPage = () => (
+const SeekWork = () => (
     <Layout>
-        <TopBar type={2} button={'seek'} />
-        <AboutContent />
+        <TopBar type={2} button={'hire'} />
+        <SeekForms type={'work'} />
         <Footer />
     </Layout>
 )
 
-export default AboutPage;
+export default SeekWork;

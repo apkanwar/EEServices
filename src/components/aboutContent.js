@@ -1,4 +1,5 @@
 import styles from '../styles/aboutContent.module.css';
+import { Link } from "react-router-dom";
 
 const AboutContent = () => {
   return (
@@ -19,7 +20,7 @@ const AboutContent = () => {
           </div>
 
           <ul className={styles.bannerButtons}>
-            <li><a href="/" className={[styles.huge, styles.button].join(" ")}>Get Started</a></li>
+            <li><Link to="/seek-work"  className={[styles.huge, styles.button].join(" ")}>Get Started</Link></li>
           </ul>
         </div>
       </div>

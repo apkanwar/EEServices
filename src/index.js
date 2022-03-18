@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './pages/Home';
 import About from './pages/About';
+import SeekWork from './pages/SeekWork';
+import SeekWorkers from './pages/SeekWorkers';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
@@ -11,6 +13,8 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/seek-work" element={<SeekWork />} />
+      <Route path="/seek-workers" element={<SeekWorkers />} />
     </Routes>
   </Router>
   ,
