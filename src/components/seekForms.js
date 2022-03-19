@@ -17,11 +17,12 @@ const SeekForms = ({ type }) => {
 
             {/* Content */}
             <div className={styles.content}>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOson8gyoZ9p6A8-4e66Az3IsFu6O_hR7AoSi8nPA0NCIIBg/viewform?embedded=true" className={styles.form_frame} frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+              <iframe title="Seek Job - Form" src="https://docs.google.com/forms/d/e/1FAIpQLSdAZVRnDxzLFdZWOAVPZqjD_oWYde0Uyn9X-xSKiltlU1Hulg/viewform?embedded=true" className={styles.form_frame} frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
             </div>
 
             {/* Sidebar */}
             <div className={styles.sidebar}>
+              <p>After your done, please send your resume to <a href="mailto:ensuredemployment@gmail.com" className={styles.formEmail}>ensuredemployment@gmail.com</a> and we'll get back to you shortly!</p>
               <br />
               <a href="/" className={[styles.image, styles.fit].join(" ")}>
                 <img src={sideImg1} alt="" />
@@ -51,7 +52,7 @@ const SeekForms = ({ type }) => {
 
             {/* Content */}
             <div className={styles.content}>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMcngdjd5AriH8757VYSo_osJFEb1gW4FhVZ2X3HutrExSCg/viewform?embedded=true" className={styles.form_frame} frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+              <iframe title="Seek Workers - Form" src="https://docs.google.com/forms/d/e/1FAIpQLSdcLk2fAYXWw8_8jaiLfe6BYPpukwPHqWo7wQwLLZkS6KR7Jw/viewform?embedded=true" className={styles.form_frame} frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
             </div>
 
             {/* Sidebar */}

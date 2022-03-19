@@ -194,3 +194,8 @@ header.major:after {
     height: 92em;
   }
 }
+
+.formEmail {
+  color: #f27c5e;
+  font-weight: 800;
+}

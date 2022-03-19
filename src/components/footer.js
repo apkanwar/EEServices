@@ -1,5 +1,4 @@
 import styles from '../styles/footer.module.css';
-import { Link } from "react-router-dom";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -27,11 +26,11 @@ const Footer = () => {
           <ul className={[styles.icons, styles.bulleted].join(" ")}>
             <li>
               <h3 className={styles.icon_header}>Phone</h3>
-              <p className={styles.close_footer}>(000) 000-0000</p>
+              <p className={styles.close_footer}>(647) 470-4004</p>
             </li>
             <li>
               <h3 className={styles.icon_header}>Email</h3>
-              <p className={styles.close_footer}><a href="mailto:ensuredsmploymentservices@gmail.com">ensuredsmploymentservices@gmail.com</a></p>
+              <p className={styles.close_footer}><a href="mailto:ensuredemployment@gmail.com">ensuredemployment@gmail.com</a></p>
             </li>
           </ul>
         </div>
