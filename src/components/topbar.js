@@ -1,6 +1,6 @@
 import styles from '../styles/topbar.module.css';
 import { Link } from "react-router-dom";
-import logo from '../images/eeLogo.png';
+import logo from '../images/ensured_logo.png';
 
 const TopBar = ({ type, button }) => {
   return (
@@ -10,7 +10,7 @@ const TopBar = ({ type, button }) => {
           <header className={styles.topbar_header}>
             <h1 className={styles.logo}>
               <img src={logo} alt="logo" className={styles.logo} />
-              <Link to="/">Ensured Employement Services</Link>
+              <Link to="/">Ensured Employment Services</Link>
             </h1>
             <nav>
               <ul>
@@ -26,7 +26,7 @@ const TopBar = ({ type, button }) => {
           <header className={[styles.topbar_header, styles.topbar_header_alt].join(" ")}>
           <h1 className={styles.logo}>
               <img src={logo} alt="logo" className={styles.logo} />
-              <Link to="/">Ensured Employement Services</Link>
+              <Link to="/">Ensured Employment Services</Link>
             </h1>
             <nav>
               <ul>

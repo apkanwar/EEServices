@@ -16,10 +16,10 @@ const Footer = () => {
           <ul className={[styles.icons, styles.bulleted].join(" ")}>
             <li>
               <div className={styles.iconContainer}>
-                <FacebookIcon sx={{ fontSize: 60 }} />
-                <InstagramIcon sx={{ fontSize: 60 }} />
-                <TwitterIcon sx={{ fontSize: 60 }} />
-                <LinkedInIcon sx={{ fontSize: 60 }} />
+                <a href='https://www.facebook.com/ensuredemployment'><FacebookIcon sx={{ fontSize: 60 }} /></a>
+                <a href='https://www.instagram.com/ensuredemployment/'><InstagramIcon sx={{ fontSize: 60 }} /></a>
+                <a href='https://www.facebook.com/ensuredemployment'><TwitterIcon sx={{ fontSize: 60 }} /></a>
+                <a href='https://www.facebook.com/ensuredemployment'><LinkedInIcon sx={{ fontSize: 60 }} /></a>
               </div>
             </li>
           </ul>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
       </div>
       <p className={styles.copyright}>&copy; Ensured Employment Services. All rights reserved.</p>
-      <p className={styles.links}><a>Terms of Use</a> | <a>Privacy Policy</a></p>
+      {/* <p className={styles.links}><a>Terms of Use</a> | <a>Privacy Policy</a></p> */}
     </footer>
   )
 }
