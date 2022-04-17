@@ -9,7 +9,7 @@ const TopBar = ({ type, button }) => {
         <>
           <header className={styles.topbar_header}>
             <h1 className={styles.logo}>
-              <img src={logo} alt="logo" className={styles.logo} />
+              <img src={logo} alt="logo" className={styles.logo} title="ensured logo" />
               <Link to="/">Ensured Employment Services</Link>
             </h1>
             <nav>
@@ -25,7 +25,7 @@ const TopBar = ({ type, button }) => {
         <>
           <header className={[styles.topbar_header, styles.topbar_header_alt].join(" ")}>
           <h1 className={styles.logo}>
-              <img src={logo} alt="logo" className={styles.logo} />
+              <img src={logo} alt="logo" className={styles.logo} title="ensured logo" />
               <Link to="/">Ensured Employment Services</Link>
             </h1>
             <nav>

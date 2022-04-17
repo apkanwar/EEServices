@@ -19,7 +19,7 @@ const Footer = () => {
                 <a href='https://www.facebook.com/ensuredemployment'><FacebookIcon sx={{ fontSize: 60 }} /></a>
                 <a href='https://www.instagram.com/ensuredemployment/'><InstagramIcon sx={{ fontSize: 60 }} /></a>
                 <a href='https://www.facebook.com/ensuredemployment'><TwitterIcon sx={{ fontSize: 60 }} /></a>
-                <a href='https://www.facebook.com/ensuredemployment'><LinkedInIcon sx={{ fontSize: 60 }} /></a>
+                <a href='https://www.linkedin.com/company/84879927/admin/'><LinkedInIcon sx={{ fontSize: 60 }} /></a>
               </div>
             </li>
           </ul>
