@@ -2,13 +2,13 @@
 
 .banner {
   background-image: url("../images/overlay.png"),
-    -moz-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.jpg");
+    -moz-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.webp");
   background-image: url("../images/overlay.png"),
-    -webkit-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.jpg");
+    -webkit-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.webp");
   background-image: url("../images/overlay.png"),
-    -ms-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.jpg");
+    -ms-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.webp");
   background-image: url("../images/overlay.png"),
-    linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.jpg");
+    linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/handshake.webp");
   background-position: center center;
   background-size: auto, cover, cover;
   background-attachment: fixed, fixed, fixed;

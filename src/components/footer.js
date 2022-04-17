@@ -30,7 +30,7 @@ const Footer = () => {
             </li>
             <li>
               <h3 className={styles.icon_header}>Email</h3>
-              <p className={styles.close_footer}><a href="mailto:ensuredemployment@gmail.com">ensuredemployment@gmail.com</a></p>
+              <p className={styles.close_footer}><a href="mailto:ensuredemployment@gmail.com">Email Us</a></p>
             </li>
           </ul>
         </div>

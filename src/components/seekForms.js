@@ -1,8 +1,8 @@
 import styles from '../styles/seekForms.module.css';
-import sideImg1 from '../images/office.jpg';
-import sideImg2 from '../images/refer.jpg';
-import sideImg3 from '../images/worker.jpg';
-import sideImg4 from '../images/two_workers.jpg';
+import sideImg1 from '../images/office.webp';
+import sideImg2 from '../images/refer.webp';
+import sideImg3 from '../images/worker.webp';
+import sideImg4 from '../images/two_workers.webp';
 
 const SeekForms = ({ type }) => {
   return (

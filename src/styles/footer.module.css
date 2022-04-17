@@ -20,13 +20,13 @@
 
 .footer {
 	background-image: url("../images/overlay.png"),
-		-moz-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.jpg");
+		-moz-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.webp");
 	background-image: url("../images/overlay.png"),
-		-webkit-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.jpg");
+		-webkit-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.webp");
 	background-image: url("../images/overlay.png"),
-		-ms-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.jpg");
+		-ms-linear-gradient(45deg, rgba(22, 244, 207, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.webp");
 	background-image: url("../images/overlay.png"),
-		linear-gradient(45deg, rgba(253, 216, 152, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.jpg");
+		linear-gradient(45deg, rgba(253, 216, 152, 0.65), rgba(101, 50, 229, 0.65)), url("../images/office.webp");
 	background-position: center center;
 	background-size: auto, cover, cover;
 	background-attachment: fixed, fixed, fixed;

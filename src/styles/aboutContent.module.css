@@ -1,6 +1,6 @@
 .about_banner {
   background-image: url("../images/overlay.png"),
-    linear-gradient(45deg, rgba(22, 244, 207, 0.5), rgba(101, 50, 229, 0.55)), url("../images/working.jpg");
+    linear-gradient(45deg, rgba(22, 244, 207, 0.5), rgba(101, 50, 229, 0.55)), url("../images/working.webp");
   background-position: center center;
   background-size: auto, cover, cover;
   background-attachment: fixed, fixed, fixed;
