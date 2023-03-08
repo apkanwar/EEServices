@@ -26,7 +26,6 @@ const Footer = () => {
           <ul className={[styles.icons, styles.bulleted].join(" ")}>
             <li>
               <h3 className={styles.icon_header}>Phone</h3>
-              <p className={styles.close_footer}>(647) 470-4004</p>
             </li>
             <li>
               <h3 className={styles.icon_header}>Email</h3>
