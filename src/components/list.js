@@ -27,7 +27,7 @@ const List = () => {
           <li>
             <LocalShippingIcon fontSize="large" color="primary" />
             <h3>Deliever and Monitor <br/> <hr style={{ backgroundColor: "#1976d2" }}/></h3>
-            <p>At this stage, the workers are executing there assigned duties. Assured Employment then awaits for clients feedback, were we than take notes to improve our service to provide our clients with 100% satisfaction with our competitive rates.  </p>
+            <p>At this stage, the workers are executing there assigned duties. Ensured Employment then awaits for clients feedback, were we than take notes to improve our service to provide our clients with 100% satisfaction with our competitive rates.  </p>
           </li>
         </ul>
       </div>
