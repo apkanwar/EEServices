@@ -7,7 +7,7 @@ const Navbar = ({ color }) => {
         <header className={`bg-${color} font-dText uppercase font-bold text-white justify-center flex 2xl:block`}>
             <div className="xl:mx-20 flex flex-row justify-between items-center">
                 <Link href="/" className='flex flex-row items-center gap-4'>
-                    <Image width={100} height={100} src="/ensuredIcon.png" className='w-16 lg:w-24' alt="" />
+                    <Image width={100} height={100} src="/logoWhite.png" className='w-16 lg:w-24' alt="" />
                     <h1 className="lg:text-xl">Ensured Employment Services</h1>
                 </Link>
 
