@@ -1,44 +1,62 @@
-import styles from '../styles/footer.module.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/Twitter';
+import { Email, Phone } from '@mui/icons-material';
+import Link from 'next/link';
 
-const Footer = () => {
-  return (
-    <footer className={styles.footer}>
-      <div className={styles.content}>
-        <div className={styles.inner}>
-          <section className={styles.about}>
-            <h3>Have Questions ?</h3>
-            <p>Get in touch with us today through phone or email.</p>
-          </section>
-          <ul className={[styles.icons, styles.bulleted].join(" ")}>
-            <li>
-              <div className={styles.iconContainer}>
-                <a href='https://www.facebook.com/ensuredemployment'><FacebookIcon sx={{ fontSize: 60 }} /></a>
-                <a href='https://www.instagram.com/ensuredemployment/'><InstagramIcon sx={{ fontSize: 60 }} /></a>
-                <a href='https://www.facebook.com/ensuredemployment'><TwitterIcon sx={{ fontSize: 60 }} /></a>
-                <a href='https://www.linkedin.com/company/84879927/admin/'><LinkedInIcon sx={{ fontSize: 60 }} /></a>
-              </div>
-            </li>
-          </ul>
-          <ul className={[styles.icons, styles.bulleted].join(" ")}>
-            <li>
-              <h3 className={styles.icon_header}>Phone</h3>
-              <p className={styles.close_footer}><a>(917) 443-9971</a></p>
-            </li>
-            <li>
-              <h3 className={styles.icon_header}>Email</h3>
-              <p className={styles.close_footer}><a href="mailto:ensuredemployment@gmail.com">Email Us</a></p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <p className={styles.copyright}>&copy; Ensured Employment Services. All rights reserved.</p>
-      {/* <p className={styles.links}><a>Terms of Use</a> | <a>Privacy Policy</a></p> */}
-    </footer>
-  )
+export default function Footer() {
+    return (
+        <footer className="bg-white font-headings dark:bg-midnight-black">
+            <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center justify-between p-16 lg:px-8 gap-8">
+                <div className="grid grid-cols-4 lg:grid-cols-2">
+                    <Link href={"https://facebook.com/ensuredemployment"} className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
+                        <FacebookIcon style={{ fontSize: 48 }} color='primary' />
+                    </Link>
+                    <Link href={"https://www.instagram.com/ensuredemployment/"} className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
+                        <InstagramIcon style={{ fontSize: 48 }} sx={{ color: "#E4405F" }} />
+                    </Link>
+                    <div className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
+                        <XIcon style={{ fontSize: 48 }} color='primary' />
+                    </div>
+                    <div className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
+                        <LinkedInIcon style={{ fontSize: 48 }} color='primary' />
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-5 lg:gap-2 ">
+                    <div className="text-2xl font-medium text-gray-900 dark:text-artic-blue text-center">
+                        &#169; 2024 <span className='xl:hidden'><br/></span>Ensured Employment
+                    </div>
+                    <hr className="w-8 h-0.5 mx-auto mb-1 bg-gray-700 border-0 rounded dark:bg-white" />
+                    <div className="text-xl font-normal text-gray-500 dark:text-gray-400 inline-block lg:pl-6">
+                        <div className="inline-block cursor-pointer pr-3 pb-1 lg:pb-0">
+                            Privacy Policy
+                        </div>
+                        <div className="inline-block cursor-pointer pr-3">
+                            Terms of Use
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-5 lg:gap-2">
+                    <div className="text-2xl font-medium text-gray-900 dark:text-artic-blue text-center lg:text-left">
+                        Contact
+                    </div>
+                    <hr className="w-8 h-0.5 mb-1 border-0 rounded bg-gray-700 dark:bg-white mx-auto lg:mx-0" />
+                    <div className='flex flex-row items-center gap-2'>
+                        <div className="flex flex-col text-custom-black gap-4 dark:text-white">
+                            <Phone style={{ fontSize: 28 }} className="mr-2" />
+                            <Email style={{ fontSize: 28 }} className="mr-2" />
+                        </div>
+                        <div className="flex flex-col text-gray-500 gap-4 dark:text-white">
+                            <div>(917) 443-9971</div>
+                            <a href="mailto:ensuredemployment@gmail.com">Email Us</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer >
+    )
 }
-
-export default Footer;

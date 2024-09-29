@@ -1,0 +1,8 @@
+.lineClampText {
+    font-family: Montserrat;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+}
