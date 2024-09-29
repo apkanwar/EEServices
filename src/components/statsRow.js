@@ -3,7 +3,7 @@ const StatsRow = () => {
   const stats = [
     { value: '100+', label: 'Employed' },
     { value: '200+', label: 'Trained' },
-    { value: '13', label: 'Clients Served' },
+    { value: '29', label: 'Clients Served' },
     { value: '6', label: 'Cities' },
   ];
 
