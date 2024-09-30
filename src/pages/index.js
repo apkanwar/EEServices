@@ -3,7 +3,7 @@ import Banner from "@/components/banner";
 import ApplicationProcess from "@/components/applicationProcess";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import IndustrySelector from "@/components/industrySelector";
+import Industries from "@/components/Industries";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Banner />
-      <IndustrySelector />
+      <Industries />
       <ApplicationProcess />
       <Contact />
       <Footer />

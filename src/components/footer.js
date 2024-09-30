@@ -10,10 +10,10 @@ export default function Footer() {
         <footer className="bg-white font-headings dark:bg-midnight-black">
             <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center justify-between p-16 lg:px-8 gap-8">
                 <div className="grid grid-cols-4 lg:grid-cols-2">
-                    <Link href={"https://facebook.com/ensuredemployment"} className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
+                    <Link href={"https://facebook.com/ensuredemployment"} target='_blank' className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
                         <FacebookIcon style={{ fontSize: 48 }} color='primary' />
                     </Link>
-                    <Link href={"https://www.instagram.com/ensuredemployment/"} className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
+                    <Link href={"https://www.instagram.com/ensuredemployment/"} target='_blank' className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
                         <InstagramIcon style={{ fontSize: 48 }} sx={{ color: "#E4405F" }} />
                     </Link>
                     <div className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">

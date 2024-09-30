@@ -34,7 +34,7 @@ export default function Banner() {
                 <TopBar />
                 <Navbar color="plum" />
                 <div className="py-4 px-2 mt-5 rounded-xl bg-transparent mx-4 xl:mx-auto text-center max-w-5xl backdrop-blur-sm">
-                    <p className="leading-normal font-semibold text-3xl lg:text-4xl 2xl:text-5xl font-headings text-white">Working to place talented and hard working people in the Canadian Workforce</p>
+                    <p className="font-semibold text-3xl lg:text-4xl 2xl:text-5xl font-headings text-white">The Leader in Staffing Solutions Connecting Candidates and Employers</p>
                 </div>
                 <div className="pb-40 pt-2 w-full flex flex-col lg:flex-row justify-center items-center absolute bottom-0 gap-6">
                     <WipeButton text="I'm a Job Seeker" color="plum" link="/job-seekers" />

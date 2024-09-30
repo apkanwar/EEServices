@@ -10,10 +10,10 @@ export default function TopBar() {
       <nav className="mx-auto flex flex-col md:flex-row max-w-7xl items-center justify-between">
         {/* Icons */}
         <div className="flex lg:flex-row">
-          <Link href={"https://facebook.com/ensuredemployment"} className="p-2 hover:bg-dark-ab transition-all cursor-pointer">
+          <Link href={"https://facebook.com/ensuredemployment"} target='_blank' className="p-2 hover:bg-dark-ab transition-all cursor-pointer">
             <FacebookIcon style={{ fontSize: 32 }} color='primary' />
           </Link>
-          <Link href={"https://www.instagram.com/ensuredemployment/"} className="p-2 hover:bg-dark-ab transition-all cursor-pointer">
+          <Link href={"https://www.instagram.com/ensuredemployment/"} target='_blank' className="p-2 hover:bg-dark-ab transition-all cursor-pointer">
             <InstagramIcon style={{ fontSize: 32 }} sx={{ color: "#E4405F" }} />
           </Link>
           <div className="p-2 hover:bg-dark-ab transition-all cursor-pointer">
