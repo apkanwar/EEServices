@@ -23,3 +23,16 @@ html {
         margin: 0;
     }
 }
+h3 {
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: black; text-align: center;
+}
+
+h4 {
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: black
+}

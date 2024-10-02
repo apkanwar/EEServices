@@ -36,7 +36,7 @@ const Navbar = ({ color }) => {
                     <Link href={"/about"} className="px-3 py-1.5 rounded hover:bg-custom-black transition ease-in duration-200">
                         About Us
                     </Link>
-                    <Link href={"https://motionrecruitment.com/blog"} target='_blank' className="px-3 py-1.5 rounded hover:bg-custom-black transition ease-in duration-200">
+                    <Link href={"/resources"} className="px-3 py-1.5 rounded hover:bg-custom-black transition ease-in duration-200">
                         Resources
                     </Link>
                     <Link href={"/faq"} className="px-3 py-1.5 rounded hover:bg-custom-black transition ease-in duration-200">
@@ -89,7 +89,7 @@ const Navbar = ({ color }) => {
                                         About Us
                                     </Link>
                                     <Link
-                                        href="https://motionrecruitment.com/blog"
+                                        href="/resources"
                                         className="-mx-3 block px-3 py-2 hover:bg-gray-50"
                                     >
                                         Resources

@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import HeadingBanner from "@/components/headingBanner";
+import Articles from "@/components/articles";
 
-export default function Home() {
+export default function Resources() {
     return (
         <>
             <Head>
@@ -11,9 +11,8 @@ export default function Home() {
             </Head>
 
             <HeadingBanner title="Resources" />
-            <Contact />
+            <Articles />
             <Footer />
-
         </>
     )
 }
