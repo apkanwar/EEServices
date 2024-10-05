@@ -95,31 +95,34 @@ export default function StaffingForm() {
                             ))}
 
                             <div className="grid grid-cols-subgrid gap-4 col-span-2">
-                                <InputField
-                                    name={AdditonalInfoInputs[0].name}
-                                    type={AdditonalInfoInputs[0].type}
-                                    placeholder={AdditonalInfoInputs[0].placeholder}
-                                    pattern={AdditonalInfoInputs[0].pattern}
-                                    required={AdditonalInfoInputs[0].required}
-                                />
+                                {AdditonalInfoInputs.map((input, index) => (
+                                    <InputField
+                                        key={index}
+                                        name={input.name}
+                                        type={input.type}
+                                        placeholder={input.placeholder}
+                                        pattern={input.pattern}
+                                        required={input.required}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col">
                         <h2 className="font-medium text-2xl font-headings mt-12 mb-4">
-                            Additonal Information
+                            Additional Information
                         </h2>
                         <div className="grid grid-cols gap-4">
                             <CheckboxInput inputs={PositionInputs} title="What Positions Are You Looking For?" size="2" />
                             <CheckboxInput inputs={Availability} title="Position Type" size="3" />
-                            <CheckboxInput inputs={PerferedShifts} title="Perfered Shift" size="3" />
+                            <CheckboxInput inputs={PerferedShifts} title="Preferred Shift" size="3" />
                         </div>
                     </div>
 
                     <div className="mt-10">
                         <button type="submit" className="bg-plum text-white rounded-full py-1 px-6 hover:bg-opacity-80 transition-opacity duration-300 text-lg font-medium font-headings w-fit">
-                            Sumbit
+                            Submit
                         </button>
                     </div>
                 </form>

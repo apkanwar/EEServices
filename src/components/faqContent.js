@@ -3,7 +3,7 @@ import { Disclosure } from '@headlessui/react';
 const questions = [
     {
         id: 1,
-        question: 'I’m looking for work, what do I need to do?',
+        question: 'I’m looking for work, what do I need to do to apply?',
         answer: 'We require everyone to apply through our website. Applications take a few days to process. If we have any positions that match your experience and credentials, we will reach out directly to schedule an interview.',
     },
     {
@@ -14,7 +14,7 @@ const questions = [
     {
         id: 3,
         question: 'What types of jobs do you staff?',
-        answer: 'We specialize in placing candidates in Human Resources, Office Support, Executive/Administrative Assistant, Marketing, Graphics, Digital Media, and Finance roles at all levels. We service a variety of industries, including Finance, Entertainment, Digital Media, Technology, Startups, Law, and Non-Profit companies. We sometimes staff jobs that don’t fit into those categories, therefore we are happy to review all resumes.',
+        answer: 'We specialize in placing candidates in Human Resources, Office Support, Executive/Administrative Assistant, Marketing, Graphics, Digital Media, and Finance roles at all levels. We serve a variety of industries, including Finance, Entertainment, Digital Media, Technology, Startups, Law, and Non-Profit companies. We sometimes staff jobs that don’t fit into those categories, therefore we are happy to review all resumes.',
     },
     {
         id: 4,
@@ -24,7 +24,7 @@ const questions = [
     {
         id: 5,
         question: 'What format should my resume be in?',
-        answer: 'We strongly prefer a Microsoft Word or PDF file. Please do not share Google Doc/Dropbox links or screenshots.',
+        answer: 'We strongly prefer a Microsoft Word or PDF file. Please do not submit Google Doc, Dropbox links, or screenshots.',
     },
     {
         id: 6,
@@ -64,9 +64,7 @@ export default function FAQContent() {
                                         </svg>
                                     </Disclosure.Button>
                                     <Disclosure.Panel className="text-lg font-dText bg-transparent">
-                                        {open ? (
-                                            <p className="whitespace-pre-line">{q.answer}</p>
-                                        ) : null}
+                                        <p className="whitespace-pre-line">{q.answer}</p>
                                     </Disclosure.Panel>
                                     <hr className="border-gray-900 dark:border-white" />
                                 </>

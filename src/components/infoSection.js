@@ -19,7 +19,7 @@ const InfoSection = ({ info, imgSrc, infoSide }) => {
                             <ul className="space-y-4">
                                 {content.listItems.map((item, indexL) => (
                                     <li key={indexL} className="flex px-4 gap-4 items-center">
-                                        <SvgIcon className="text-plum">
+                                        <SvgIcon className="text-plum" aria-label="check icon">
                                             <CheckCircleIcon />
                                         </SvgIcon>
                                         <span className="text-gray-600 font-dText text-lg">{item}</span>

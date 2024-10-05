@@ -20,7 +20,7 @@ const InfoOne = [
 
 const InfoTwo = [
     {
-        title: "Esuring your Needs",
+        title: "Ensuring your Needs",
         subtitle: "Experience the Difference",
         description: ["Our clients benefit from our ability to connect to a diverse group of experienced, qualified and dedicated applicants. Drawing from this exceptional network enables us to select the highest caliber candidates to fit your business and culture."]
     }
@@ -49,6 +49,11 @@ export default function ForEmployers() {
         <>
             <Head>
                 <title>Ensured Employment</title>
+                <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+                <meta property="og:title" content="Ensured Employment Services" />
+                <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
+                <meta property="og:image" content="/logo.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
 
             <HeadingBanner title="Employers" buttonInfo={buttonInfo} />

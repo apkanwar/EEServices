@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const AboutDetails = () => {
     return (
@@ -22,7 +21,7 @@ const AboutDetails = () => {
                 </div>
                 <div className="w-2/3 flex">
                     <p className="text-lg font-medium font-dText">
-                        Our goals are awlays to help to make sure the workers are taken care of.
+                        Our goal is always to help ensure that workers are taken care of.
                     </p>
                 </div>
             </div>
@@ -35,7 +34,7 @@ const AboutDetails = () => {
                 </div>
                 <div className="w-2/3 flex">
                     <p className="text-lg font-medium font-dText">
-                        We strive to Innovate the user experience and change what it means to work with an employment service.
+                        We strive to innovate the user experience and change what it means to work with an employment service.
                     </p>
                 </div>
             </div>

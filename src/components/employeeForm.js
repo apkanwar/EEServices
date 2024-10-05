@@ -106,64 +106,38 @@ export default function EmployeeForm() {
                             General Information
                         </h2>
                         <div className="grid grid-cols-2 gap-4">
-                            <InputField
-                                name={GeneralInfoInputs[0].name}
-                                type={GeneralInfoInputs[0].type}
-                                placeholder={GeneralInfoInputs[0].placeholder}
-                                pattern={GeneralInfoInputs[0].pattern}
-                                required={GeneralInfoInputs[0].required}
-                            />
-
-                            <InputField
-                                name={GeneralInfoInputs[1].name}
-                                type={GeneralInfoInputs[1].type}
-                                placeholder={GeneralInfoInputs[1].placeholder}
-                                pattern={GeneralInfoInputs[1].pattern}
-                                required={GeneralInfoInputs[1].required}
-                            />
-
-                            <InputField
-                                name={GeneralInfoInputs[2].name}
-                                type={GeneralInfoInputs[2].type}
-                                placeholder={GeneralInfoInputs[2].placeholder}
-                                pattern={GeneralInfoInputs[2].pattern}
-                                required={GeneralInfoInputs[2].required}
-                            />
-
-                            <InputField
-                                name={GeneralInfoInputs[3].name}
-                                type={GeneralInfoInputs[3].type}
-                                placeholder={GeneralInfoInputs[3].placeholder}
-                                pattern={GeneralInfoInputs[3].pattern}
-                                required={GeneralInfoInputs[3].required}
-                            />
+                            {GeneralInfoInputs.map((input, idx) => (
+                                <InputField
+                                    key={idx}
+                                    name={input.name}
+                                    type={input.type}
+                                    placeholder={input.placeholder}
+                                    pattern={input.pattern}
+                                    required={input.required}
+                                />
+                            ))}
                         </div>
                     </div>
 
                     <div className="flex flex-col">
                         <h2 className="font-medium text-2xl font-headings mt-12 mb-4">
-                            Additonal Information
+                            Additional Information
                         </h2>
                         <div className="grid grid-cols gap-4">
-                            <InputField
-                                name={AdditonalInfoInputs[0].name}
-                                type={AdditonalInfoInputs[0].type}
-                                placeholder={AdditonalInfoInputs[0].placeholder}
-                                pattern={AdditonalInfoInputs[0].pattern}
-                                required={AdditonalInfoInputs[0].required}
-                            />
-
-                            <InputField
-                                name={AdditonalInfoInputs[1].name}
-                                type={AdditonalInfoInputs[1].type}
-                                placeholder={AdditonalInfoInputs[1].placeholder}
-                                pattern={AdditonalInfoInputs[1].pattern}
-                                required={AdditonalInfoInputs[1].required}
-                            />
+                            {AdditonalInfoInputs.map((input, idx) => (
+                                <InputField
+                                    key={idx}
+                                    name={input.name}
+                                    type={input.type}
+                                    placeholder={input.placeholder}
+                                    pattern={input.pattern}
+                                    required={input.required}
+                                />
+                            ))}
 
                             <CheckboxInput inputs={PositionInputs} title="What Positions Interest You?" size="2" />
                             <CheckboxInput inputs={Availability} title="Availability" size="3" />
-                            <CheckboxInput inputs={PerferedShifts} title="Perfered Shift" size="3" />
+                            <CheckboxInput inputs={PerferedShifts} title="Preferred Shift" size="3" />
                         </div>
 
 
@@ -187,7 +161,7 @@ export default function EmployeeForm() {
 
                     <div className="mt-10">
                         <button type="submit" className="bg-plum text-white rounded-full py-1 px-6 hover:bg-opacity-80 transition-opacity duration-300 text-lg font-medium font-headings w-fit">
-                            Sumbit
+                            Submit
                         </button>
                     </div>
                 </form>

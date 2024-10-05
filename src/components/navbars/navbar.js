@@ -11,7 +11,7 @@ const Navbar = ({ color }) => {
         <header className={`bg-${color} font-dText uppercase font-bold text-white justify-center 2xl:block`}>
             <div className="xl:mx-20 md:mx-8 flex flex-col md:flex-row justify-between items-center">
                 <Link href="/" className='flex flex-row items-center gap-4'>
-                    <Image width={100} height={100} src="/logoWhite.png" className='w-16 lg:w-24' alt="" />
+                    <Image width={100} height={100} src="/logoWhite.png" className='w-16 lg:w-24' alt="Ensured Employment Services Logo" />
                     <h1 className="lg:text-xl">Ensured Employment Services</h1>
                 </Link>
 
@@ -51,11 +51,8 @@ const Navbar = ({ color }) => {
                         <div className="flex items-center justify-between md:justify-end">
                             {/* Logo */}
                             <Link href="/" className='md:hidden'>
-                                <img
-                                    className="h-16 w-auto"
-                                    src="/logo.png"
-                                    alt=""
-                                />
+                                <Image className="h-16 w-auto" src="/logo.png" alt="Ensured Employment Services Logo" width={64} height={64} />
+
                             </Link>
                             <button
                                 type="button"

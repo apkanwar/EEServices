@@ -1,4 +1,3 @@
-
 const StatsRow = () => {
   const stats = [
     { value: '100+', label: 'Employed' },
@@ -9,17 +8,14 @@ const StatsRow = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-12 py-20">
-      <div className="flex justify-center items-center gap-20">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-20">
         {stats.map((stat, index) => (
-          <div key={index} className="flex flex-col gap-2 items-center">
-            <div className="text-4xl font-bold font-main">{stat.value}</div>
-            <div className="text-md font-medium font-dText">{stat.label}</div>
-          </div>
+          <section key={index} className="flex flex-col gap-2 items-center">
+            <div className="lg:text-4xl text-3xl font-bold font-main">{stat.value}</div>
+            <div className="lg:text-lg text-sm font-medium font-dText">{stat.label}</div>
+          </section>
         ))}
       </div>
-      {/* <p className="text-lg font-semibold italic text-plum font-dText">
-        and we&apos;re just getting started
-      </p> */}
     </div>
   );
 };

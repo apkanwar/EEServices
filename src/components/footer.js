@@ -6,36 +6,32 @@ import { Email, Phone } from '@mui/icons-material';
 import Link from 'next/link';
 
 export default function Footer() {
+    const socialMedia = [
+        { href: "https://facebook.com/ensuredemployment", icon: FacebookIcon, color: 'primary', label: "Facebook" },
+        { href: "https://www.instagram.com/ensuredemployment/", icon: InstagramIcon, style: { color: "#E4405F" }, label: "Instagram" },
+        { href: "#", icon: XIcon, color: 'primary', label: "Twitter" },
+        { href: "#", icon: LinkedInIcon, color: 'primary', label: "LinkedIn" }
+    ];
+
     return (
         <footer className="bg-white font-headings dark:bg-midnight-black">
             <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center justify-between p-16 lg:px-8 gap-8">
                 <div className="grid grid-cols-4 lg:grid-cols-2">
-                    <Link href={"https://facebook.com/ensuredemployment"} target='_blank' className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
-                        <FacebookIcon style={{ fontSize: 48 }} color='primary' />
-                    </Link>
-                    <Link href={"https://www.instagram.com/ensuredemployment/"} target='_blank' className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
-                        <InstagramIcon style={{ fontSize: 48 }} sx={{ color: "#E4405F" }} />
-                    </Link>
-                    <div className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
-                        <XIcon style={{ fontSize: 48 }} color='primary' />
-                    </div>
-                    <div className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer">
-                        <LinkedInIcon style={{ fontSize: 48 }} color='primary' />
-                    </div>
+                    {socialMedia.map(({ href, icon: Icon, color, style, label }, idx) => (
+                        <Link key={idx} href={href} target='_blank' className="p-2 hover:bg-artic-blue transition-all rounded-md mx-2 cursor-pointer" aria-label={label}>
+                            <Icon style={{ fontSize: 48, ...style }} color={color} />
+                        </Link>
+                    ))}
                 </div>
 
-                <div className="flex flex-col gap-5 lg:gap-2 ">
+                <div className="flex flex-col gap-5 lg:gap-2">
                     <div className="text-2xl font-medium text-gray-900 dark:text-artic-blue text-center">
-                        &#169; 2024 <span className='xl:hidden'><br/></span>Ensured Employment
+                        &#169; 2024 <span className='xl:hidden'><br /></span>Ensured Employment
                     </div>
                     <hr className="w-8 h-0.5 mx-auto mb-1 bg-gray-700 border-0 rounded dark:bg-white" />
                     <div className="text-xl font-normal text-gray-500 dark:text-gray-400 inline-block lg:pl-6">
-                        <div className="inline-block cursor-pointer pr-3 pb-1 lg:pb-0">
-                            Privacy Policy
-                        </div>
-                        <div className="inline-block cursor-pointer pr-3">
-                            Terms of Use
-                        </div>
+                        <Link href="/privacy-policy" className="inline-block cursor-pointer pr-3 pb-1 lg:pb-0">Privacy Policy</Link>
+                        <Link href="/terms-of-use" className="inline-block cursor-pointer pr-3">Terms of Use</Link>
                     </div>
                 </div>
 
@@ -57,6 +53,6 @@ export default function Footer() {
                 </div>
 
             </div>
-        </footer >
-    )
+        </footer>
+    );
 }
