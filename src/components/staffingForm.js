@@ -39,6 +39,8 @@ export default function StaffingForm() {
         { title: 'Night', id: 'Night' }
     ];
 
+    const [status, setStatus] = useState(null);
+
     async function storeStaffingRequest(e) {
         e.preventDefault();
         const formData = {
@@ -67,8 +69,10 @@ export default function StaffingForm() {
         try {
             await saveToFireBase(formData, 'staffingRequests');
             console.log("Data successfully saved to Firestore.");
+            setStatus({ type: "success", message: "Data successfully saved!" });
         } catch (error) {
             console.error("Failed to save data: ", error.message);
+            setStatus({ type: "error", message: "Failed to save data. Please try again." });
         }
     }
 
@@ -118,6 +122,12 @@ export default function StaffingForm() {
                             <CheckboxInput inputs={PerferedShifts} title="Preferred Shift" size="3" />
                         </div>
                     </div>
+
+                    {status && (
+                        <div className={`p-4 mt-8 ${status.type === "success" ? "bg-green-100 text-green-700 border-green-700" : "bg-red-100 text-red-700 border-red-700"} border rounded-lg`}>
+                            {status.message}
+                        </div>
+                    )}
 
                     <div className="mt-10">
                         <button type="submit" className="bg-plum text-white rounded-full py-1 px-6 hover:bg-opacity-80 transition-opacity duration-300 text-lg font-medium font-headings w-fit">
