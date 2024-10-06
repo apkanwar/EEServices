@@ -43,6 +43,7 @@ export default function EmployeeForm() {
 
     const [selectedFile, setSelectedFile] = useState(null);
     const [selectedFileText, setSelectedFileText] = useState("Click to upload or drag and drop");
+    const [status, setStatus] = useState(null);
 
     const handleFile = async (e) => {
         e.preventDefault();
@@ -91,8 +92,11 @@ export default function EmployeeForm() {
         try {
             await saveToFireBase(formData, 'resumes');
             console.log("Data successfully saved to Firestore.");
+            setStatus({ type: "success", message: "Data successfully saved!" });
+
         } catch (error) {
             console.error("Failed to save data: ", error.message);
+            setStatus({ type: "error", message: "Failed to save data. Please try again." });
         }
     }
 
@@ -158,6 +162,12 @@ export default function EmployeeForm() {
                         </div>
 
                     </div>
+
+                    {status && (
+                        <div className={`p-4 mt-8 ${status.type === "success" ? "bg-green-100 text-green-700 border-green-700" : "bg-red-100 text-red-700 border-red-700"} border rounded-lg`}>
+                            {status.message}
+                        </div>
+                    )}
 
                     <div className="mt-10">
                         <button type="submit" className="bg-plum text-white rounded-full py-1 px-6 hover:bg-opacity-80 transition-opacity duration-300 text-lg font-medium font-headings w-fit">

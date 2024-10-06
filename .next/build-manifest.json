@@ -26,11 +26,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/submit-resume.js"
-    ],
-    "/submit-staffing-request": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/submit-staffing-request.js"
     ]
   },
   "ampFirstPages": []
