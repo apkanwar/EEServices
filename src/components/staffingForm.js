@@ -74,52 +74,54 @@ export default function StaffingForm() {
 
 
     return (
-        <div className="py-24">
-            <section className="mx-4 xl:mx-auto max-w-5xl flex flex-col bg-white rounded-lg p-20">
+        <div className="py-24 text-sm md:text-md">
+            <section className="mx-4 xl:mx-auto max-w-5xl flex flex-col bg-white rounded-lg p-4 md:p-20">
                 <form autoComplete="off" className="font-dText" onSubmit={storeStaffingRequest}>
                     <div className="flex flex-col">
                         <h2 className="font-medium text-2xl font-headings mb-4">
                             General Information
                         </h2>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {GeneralInfoInputs.map((info, index) => (
-                                <section key={index}>
-                                    <InputField
-                                        name={info.name}
-                                        type={info.type}
-                                        placeholder={info.placeholder}
-                                        pattern={info.pattern}
-                                        required={info.required}
-                                    />
-                                </section>
+                                <InputField
+                                    key={index}
+                                    name={info.name}
+                                    type={info.type}
+                                    placeholder={info.placeholder}
+                                    pattern={info.pattern}
+                                    required={info.required}
+                                />
                             ))}
 
-                            <div className="grid grid-cols-subgrid gap-4 col-span-2">
-                                <InputField
-                                    name={AdditonalInfoInputs[0].name}
-                                    type={AdditonalInfoInputs[0].type}
-                                    placeholder={AdditonalInfoInputs[0].placeholder}
-                                    pattern={AdditonalInfoInputs[0].pattern}
-                                    required={AdditonalInfoInputs[0].required}
-                                />
+                            <div className="grid grid-cols-subgrid gap-4 md:col-span-2">
+                                {AdditonalInfoInputs.map((input, index) => (
+                                    <InputField
+                                        key={index}
+                                        name={input.name}
+                                        type={input.type}
+                                        placeholder={input.placeholder}
+                                        pattern={input.pattern}
+                                        required={input.required}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col">
                         <h2 className="font-medium text-2xl font-headings mt-12 mb-4">
-                            Additonal Information
+                            Additional Information
                         </h2>
                         <div className="grid grid-cols gap-4">
                             <CheckboxInput inputs={PositionInputs} title="What Positions Are You Looking For?" size="2" />
                             <CheckboxInput inputs={Availability} title="Position Type" size="3" />
-                            <CheckboxInput inputs={PerferedShifts} title="Perfered Shift" size="3" />
+                            <CheckboxInput inputs={PerferedShifts} title="Preferred Shift" size="3" />
                         </div>
                     </div>
 
                     <div className="mt-10">
                         <button type="submit" className="bg-plum text-white rounded-full py-1 px-6 hover:bg-opacity-80 transition-opacity duration-300 text-lg font-medium font-headings w-fit">
-                            Sumbit
+                            Submit
                         </button>
                     </div>
                 </form>

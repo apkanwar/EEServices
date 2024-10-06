@@ -1,4 +1,3 @@
-// components/WipeButton.js
 import SvgIcon from "@mui/material/SvgIcon";
 
 const GridContainer = ({ heading, details, icon }) => {

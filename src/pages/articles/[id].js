@@ -18,12 +18,17 @@ export default function ArticlePage({ article }) {
         <>
             <Head>
                 <title>Ensured Employment</title>
+                <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+                <meta property="og:title" content="Ensured Employment Services" />
+                <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
+                <meta property="og:image" content="/logo.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
 
             <TopBar />
             <Navbar color={'plum'} />
             <div className="max-w-5xl mx-auto py-12">
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden mx-4">
                     {/* Article Image */}
                     <div className="relative h-64 w-full">
                         <Image
