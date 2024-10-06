@@ -28,7 +28,7 @@ export default function ArticlePage({ article }) {
             <TopBar />
             <Navbar color={'plum'} />
             <div className="max-w-5xl mx-auto py-12">
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden mx-4">
                     {/* Article Image */}
                     <div className="relative h-64 w-full">
                         <Image

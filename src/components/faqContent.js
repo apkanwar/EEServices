@@ -47,7 +47,7 @@ export default function FAQContent() {
                         <Disclosure key={q.id}>
                             {({ open }) => (
                                 <>
-                                    <Disclosure.Button className="flex justify-between my-auto w-full py-3 text-lg font-headings font-semibold bg-transparent transition-all">
+                                    <Disclosure.Button className="flex text-start justify-between my-auto w-full py-3 text-lg font-headings font-semibold bg-transparent transition-all">
                                         <span>{q.question}</span>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

@@ -51,7 +51,7 @@ const Articles = () => {
     }, [filterType]);
 
     return (
-        <div className="my-24 max-w-5xl mx-auto">
+        <div className="my-24 max-w-5xl mx-4 xl:mx-auto">
             <div className="mb-6">
                 <label htmlFor="filterType" className="mr-2 font-bold">Show: </label>
                 <select

@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/submit-staffing-request": "pages/submit-staffing-request.js",
-  "/about": "pages/about.js",
-  "/": "pages/index.js"
+  "/submit-resume": "pages/submit-resume.js"
 }

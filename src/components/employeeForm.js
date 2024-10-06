@@ -98,14 +98,14 @@ export default function EmployeeForm() {
 
 
     return (
-        <div className="py-24">
-            <section className="mx-4 xl:mx-auto max-w-5xl flex flex-col bg-white rounded-lg p-20">
+        <div className="py-24 text-sm md:text-md">
+            <section className="mx-4 xl:mx-auto max-w-5xl flex flex-col bg-white rounded-lg p-8 md:p-20">
                 <form autoComplete="off" className="font-dText" onSubmit={storeEmployeeInfo}>
                     <div className="flex flex-col">
                         <h2 className="font-medium text-2xl font-headings mb-4">
                             General Information
                         </h2>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {GeneralInfoInputs.map((input, idx) => (
                                 <InputField
                                     key={idx}

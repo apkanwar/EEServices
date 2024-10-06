@@ -5,9 +5,9 @@ import React from 'react';
 
 const InfoSection = ({ info, imgSrc, infoSide }) => {
     return (
-        <div className={`flex flex-col max-w-7xl mx-auto items-center md:items-start ${infoSide === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'} py-24`}>
+        <div className={`flex flex-col max-w-7xl mx-auto items-center md:items-start ${infoSide === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'} py-8 lg:py-24`}>
             {/* Text Section */}
-            <div className="flex flex-col gap-36 w-full md:w-1/2 px-6 m-auto">
+            <div className="flex flex-col gap-12 xl:gap-36 w-full md:w-1/2 px-6 m-auto py-16 md:py-4">
                 {info.map((content, index) => (
                     <div key={index}>
                         <h4 className="font-semibold text-plum uppercase font-headings">{content.subtitle}</h4>
