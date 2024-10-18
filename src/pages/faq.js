@@ -8,8 +8,8 @@ export default function FAQ() {
     return (
         <>
             <Head>
-                <title>Ensured Employment</title>
-                <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+                <title>FAQ - Ensured Employment</title>
+                <meta name="description" content="Have questions? perhaps we can help you answer them here!" />
                 <meta property="og:title" content="Ensured Employment Services" />
                 <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
                 <meta property="og:image" content="/logo.png" />

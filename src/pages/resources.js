@@ -7,8 +7,8 @@ export default function Resources() {
     return (
         <>
             <Head>
-                <title>Ensured Employment</title>
-                <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+                <title>Blog - Ensured Employment</title>
+                <meta name="description" content="Check out some resources that can help you out on your way to getting that next job." />
                 <meta property="og:title" content="Ensured Employment Services" />
                 <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
                 <meta property="og:image" content="/logo.png" />

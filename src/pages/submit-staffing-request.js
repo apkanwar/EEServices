@@ -7,8 +7,8 @@ export default function SubmitStaffingRequest() {
   return (
     <>
       <Head>
-        <title>Ensured Employment</title>
-        <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+        <title>Submit Staffing Request - Ensured Employment</title>
+        <meta name="description" content="Let us know what your business is looking for. We'll make sure you get the employees that you need and are right for you." />
         <meta property="og:title" content="Ensured Employment Services" />
         <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
         <meta property="og:image" content="/logo.png" />
