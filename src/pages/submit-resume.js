@@ -7,8 +7,8 @@ export default function SubmitResume() {
   return (
     <>
       <Head>
-        <title>Ensured Employment</title>
-        <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+        <title>Submit Resume - Ensured Employment</title>
+        <meta name="description" content="Get in Touch with us and we'll be sure to reach out to help you get started." />
         <meta property="og:title" content="Ensured Employment Services" />
         <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
         <meta property="og:image" content="/logo.png" />

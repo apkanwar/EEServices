@@ -36,8 +36,8 @@ export default function ForJobSeekers() {
     return (
         <>
             <Head>
-                <title>Ensured Employment</title>
-                <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
+                <title>Seek Work - Ensured Employment</title>
+                <meta name="description" content="Looking for work, we're here to make the process a lot easier. Check us out!" />
                 <meta property="og:title" content="Ensured Employment Services" />
                 <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
                 <meta property="og:image" content="/logo.png" />
