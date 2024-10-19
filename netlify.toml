@@ -4,8 +4,8 @@
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
-  # Optional configuration
   [plugins.inputs]
-    changeFreq = "daily"  # Set the default frequency for the sitemap
-    priority = 0.7             # Set the priority for your pages
-    exclude = ["/privacy-policy", "/terms-of-service"]  # Exclude specific paths
+    buildDir = ".next"
+    changeFreq = "daily"
+    priority = 0.7
+    exclude = ["/privacy-policy", "/terms-of-service"]
