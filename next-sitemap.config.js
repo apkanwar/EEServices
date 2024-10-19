@@ -1,6 +1,7 @@
 module.exports = {
     siteUrl: process.env.SITE_URL,
     generateRobotsTxt: true,
-    sitemapSize: 5000,
+    sitemapSize: 50000,
+    generateIndexSitemap: false,
     exclude: ['/privacy-policy', '/terms-of-service'],
 }
