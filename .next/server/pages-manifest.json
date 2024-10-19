@@ -1,1 +1,9 @@
-{"/_app":"pages/_app.js","/api/saveToFirebase":"pages/api/saveToFirebase.js","/_document":"pages/_document.js","/faq":"pages/faq.html","/_error":"pages/_error.js","/about":"pages/about.html","/employers":"pages/employers.html","/job-seekers":"pages/job-seekers.html","/":"pages/index.html","/submit-staffing-request":"pages/submit-staffing-request.html","/articles/[id]":"pages/articles/[id].js","/resources":"pages/resources.html","/submit-resume":"pages/submit-resume.html","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.js",
+  "/": "pages/index.js",
+  "/about": "pages/about.js",
+  "/job-seekers": "pages/job-seekers.js"
+}
