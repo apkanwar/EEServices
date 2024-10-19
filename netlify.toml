@@ -1,11 +1,13 @@
 [build]
-    publish = "out"  # Or another output directory if configured
+  command = "next build"   # Only run next build, no export needed
+  publish = ".next"        # This is where SSR builds go
 
 [[plugins]]
 package = "@netlify/plugin-sitemap"
-    [plugins.inputs]
-    buildDir = "out"
-    changeFreq = "always"
-    priority = 0.7
-    exclude = ["/privacy-policy", "/terms-of-service"]
-    prettyURLs = true
+
+  [plugins.inputs]
+  buildDir = ".next"
+  changeFreq = "always"
+  priority = 0.7
+  exclude = ["/privacy-policy", "/terms-of-service"]
+  prettyURLs = true
