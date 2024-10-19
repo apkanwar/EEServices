@@ -1,7 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/about": "pages/about.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/api/saveToFirebase":"pages/api/saveToFirebase.js","/employers":"pages/employers.html","/about":"pages/about.html","/faq":"pages/faq.html","/":"pages/index.html","/job-seekers":"pages/job-seekers.html","/submit-resume":"pages/submit-resume.html","/resources":"pages/resources.html","/submit-staffing-request":"pages/submit-staffing-request.html","/articles/[id]":"pages/articles/[id].js","/404":"pages/404.html"}

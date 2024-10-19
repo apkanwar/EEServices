@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ensuredemployment.com/
+
+# Sitemaps
+Sitemap: https://ensuredemployment.com/sitemap.xml
