@@ -1,11 +1,10 @@
 [build]
-    publish = ".next"
+    publish = "out"  # Or another output directory if configured
 
 [[plugins]]
 package = "@netlify/plugin-sitemap"
-
     [plugins.inputs]
-    buildDir = ".next"
+    buildDir = "out"
     changeFreq = "always"
     priority = 0.7
     exclude = ["/privacy-policy", "/terms-of-service"]
