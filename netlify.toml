@@ -1,5 +1,12 @@
-[[plugins]]
-package = "@netlify/plugin-sitemap"
+[build]
+  publish = ".next"  # Adjust the 'publish' directory to match your project's output folder
 
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+  # Optional configuration
   [plugins.inputs]
-  buildDir = ".next"
+    changeFrequency = "daily"  # Set the default frequency for the sitemap
+    priority = 0.7             # Set the priority for your pages
+    exclude = ["/privacy-policy", "/terms-of-service"]  # Exclude specific paths
+    sitemapFilename = "sitemap.xml"  # Customize the sitemap file name
