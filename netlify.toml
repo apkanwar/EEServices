@@ -1,6 +1,8 @@
+[build]
+command = “npm run build”
+publish = “build/”
+functions = “functions/”
 [[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "src"
-  filePath = "pages/sitemap.xml"
+package = “@netlify/plugin-sitemap”
+[plugins.inputs]
+buildDir = “public”
