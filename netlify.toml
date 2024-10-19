@@ -6,7 +6,6 @@
 
   # Optional configuration
   [plugins.inputs]
-    changeFrequency = "daily"  # Set the default frequency for the sitemap
+    changeFreq = "daily"  # Set the default frequency for the sitemap
     priority = 0.7             # Set the priority for your pages
     exclude = ["/privacy-policy", "/terms-of-service"]  # Exclude specific paths
-    sitemapFilename = "sitemap.xml"  # Customize the sitemap file name
