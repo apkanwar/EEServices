@@ -38,5 +38,5 @@ h4 {
 }
 
 .hover-button {
-    @apply w-32 h-fit p-2 font-headings font-semibold rounded bg-plum text-white hover:bg-custom-black hover:text-white transition ease-in duration-200
+    @apply h-fit px-8 py-2 font-headings font-semibold rounded bg-plum text-white hover:bg-custom-black hover:text-white transition ease-in duration-200
   }

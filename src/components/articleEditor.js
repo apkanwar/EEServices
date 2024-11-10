@@ -28,6 +28,8 @@ export default function ArticleEditor() {
 
     const addBlock = (type) => setBlocks(prevBlocks => [...prevBlocks, { id: Date.now().toString(), type, content: '' }]);
 
+    const deleteBlock = (id) => setBlocks(blocks.filter(block => block.id !== id));
+
     const updateBlockContent = (id, content) => {
         setBlocks(blocks.map(block => (block.id === id ? { ...block, content } : block)));
     };
@@ -57,24 +59,28 @@ export default function ArticleEditor() {
             return '';
         }).join('');
 
-        const articleData = {
-            title,
-            image: resumeURL,
-            type: articleType.value,
-            content: htmlContent,
-        };
+        if (title === '' || resumeURL === '' || htmlContent === '') {
+            setStatus({ type: "error", message: "Some fields are empty. Please check again."});
+        } else {
+            const articleData = {
+                title,
+                image: resumeURL,
+                type: articleType.value,
+                content: htmlContent,
+            };
 
-        try {
-            await saveToFireBase(articleData, 'articles');
-            setStatus({ type: "success", message: "Article uploaded successfully!" });
-            resetForm();
-        } catch (error) {
-            setStatus({ type: "error", message: "Failed to upload article. Please try again." });
+            try {
+                await saveToFireBase(articleData, 'articles');
+                setStatus({ type: "success", message: "Article uploaded successfully!" });
+                resetForm();
+            } catch (error) {
+                setStatus({ type: "error", message: "Failed to upload article. Please try again." });
+            }
         }
     };
 
     return (
-        <div className="p-6 max-w-7xl mx-auto">
+        <div className="mb-48 p-6 max-w-7xl mx-auto">
             {/* Article Metadata Inputs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                 <div>
@@ -83,6 +89,7 @@ export default function ArticleEditor() {
                         id="title"
                         type="text"
                         value={title}
+                        required
                         onChange={(e) => setTitle(e.target.value)}
                         className="w-full p-2 border border-gray-300 rounded mb-2"
                     />
@@ -106,13 +113,13 @@ export default function ArticleEditor() {
                             <p className="mb-2 text-sm text-gray-500">{selectedFileText}</p>
                             <p className="text-xs text-gray-500 font-semibold">PNG</p>
                         </div>
-                        <input id="resumeDropzone" type="file" className="hidden" accept="application/png" onChange={handleFile} />
+                        <input id="resumeDropzone" required type="file" className="hidden" accept="application/png" onChange={handleFile} />
                     </label>
                 </div>
             </div>
 
             {/* Add Block Buttons */}
-            <div className="flex space-x-4 my-8 items-center gap-4">
+            <div className="flex space-x-4 my-8 items-center gap-4 flex-wrap">
                 <h1 className="font-headings font-semibold text-xl">Add Fields:</h1>
                 {['heading', 'paragraph', 'list'].map(type => (
                     <button key={type} onClick={() => addBlock(type)} className="hover-button capitalize">{type}</button>
@@ -171,7 +178,7 @@ export default function ArticleEditor() {
 
             {/* Submit Button */}
             <div className="flex justify-center mt-6">
-                <button onClick={handleSubmit} className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">
+                <button onClick={handleSubmit} className="hover-button !bg-green-500 hover:!bg-green-800">
                     Submit Article
                 </button>
             </div>

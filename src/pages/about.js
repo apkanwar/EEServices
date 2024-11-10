@@ -5,7 +5,7 @@ import AboutDetails from "@/components/aboutDetails";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>

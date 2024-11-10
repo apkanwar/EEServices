@@ -24,7 +24,7 @@ export default function Inputs_Select({ id, label, content, selected, onChange }
 
             <Listbox value={localSelected} onChange={handleChange}>
                 <div className="relative z-10">
-                    <Listbox.Button className="relative cursor-default ring-1 ring-inset ring-gray-300 rounded-lg bg-white py-2 pl-3 pr-10 text-left focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm w-48">
+                    <Listbox.Button className="relative cursor-default ring-1 ring-inset ring-gray-300 rounded-lg bg-white py-2 pl-3 pr-10 text-left focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm w-72">
                         <span className="block truncate">{localSelected.name}</span>
                         <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                             <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -37,7 +37,7 @@ export default function Inputs_Select({ id, label, content, selected, onChange }
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Listbox.Options className={"absolute w-48 mt-1 max-h-60 overflow-auto rounded-md bg-white text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"}>
+                        <Listbox.Options className={"absolute w-72 mt-1 max-h-60 overflow-auto rounded-md bg-white text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"}>
                             {content.map((item, idx) => (
                                 <Listbox.Option
                                     key={idx}

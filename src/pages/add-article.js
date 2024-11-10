@@ -1,9 +1,9 @@
 import Head from "next/head";
 import HeadingBanner from "@/components/headingBanner";
 import ArticleEditor from "@/components/articleEditor";
+import withAuth from '@/hooks/withAuth';
 
-
-export default function Home() {
+function AddArticle() {
     return (
         <>
             <Head>
@@ -20,3 +20,5 @@ export default function Home() {
         </>
     )
 }
+
+export default withAuth(AddArticle);
