@@ -36,3 +36,7 @@ h4 {
     font-size: 22px;
     color: black
 }
+
+.hover-button {
+    @apply w-32 h-fit p-2 font-headings font-semibold rounded bg-plum text-white hover:bg-custom-black hover:text-white transition ease-in duration-200
+  }

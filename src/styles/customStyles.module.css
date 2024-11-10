@@ -6,3 +6,11 @@
     line-clamp: 6;
     -webkit-line-clamp: 6;
 }
+
+.labels {
+    display: block;
+    font-size: 14px;
+    font-family: Montserrat;
+    line-height: 24px;
+    color: rgb(17 24 39);
+}
