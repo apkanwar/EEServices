@@ -26,7 +26,8 @@ export default function Footer() {
 
                 <div className="flex flex-col gap-5 lg:gap-2">
                     <div className="text-2xl font-medium text-gray-900 dark:text-artic-blue text-center">
-                        &#169; 2024 <span className='xl:hidden'><br /></span>Ensured Employment
+                        <Link href={'/add-article'} className='cursor-default'>&#169; </Link>
+                        2024 <span className='xl:hidden'><br /></span>Ensured Employment
                     </div>
                     <hr className="w-8 h-0.5 mx-auto mb-1 bg-gray-700 border-0 rounded dark:bg-white" />
                     <div className="text-xl font-normal text-gray-500 dark:text-gray-400 inline-block lg:pl-6">
