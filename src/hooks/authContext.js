@@ -14,7 +14,7 @@ export function AuthProvider({ children }) {
     }, []);
 
     const login = (password) => {
-        const correctPassword = process.env.ADMIN_EDITOR_PASSWORD || 'your-password';
+        const correctPassword = process.env.NEXT_PUBLIC_ADMIN_EDITOR_PASSWORD || 'your-password';
         if (password === correctPassword) {
             localStorage.setItem('isAuthorized', 'true');
             setIsAuthorized(true);
