@@ -17,12 +17,17 @@ export default function ArticlePage({ article }) {
     return (
         <>
             <Head>
-                <title>Ensured Employment</title>
+                <title>{article.title} - Ensured Employment</title>
                 <meta name="description" content="Find the best staffing solutions for your business with Ensured Employment. We connect qualified candidates to meet your company's unique needs." />
                 <meta property="og:title" content="Ensured Employment Services" />
                 <meta property="og:description" content="Find the best staffing solutions for your business with Ensured Employment." />
                 <meta property="og:image" content="/logo.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-title" content="Your Page Title" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <meta name="format-detection" content="telephone=no" />
             </Head>
 
             <TopBar />

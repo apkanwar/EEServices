@@ -11,7 +11,7 @@ export default function LoginPage() {
     const handleLogin = (e) => {
         e.preventDefault();
         if (login(password)) {
-            router.push('/add-article'); // Redirect to a protected page
+            router.push('/admin'); // Redirect to a protected page
         } else {
             setError('Incorrect password. Please try again.');
         }

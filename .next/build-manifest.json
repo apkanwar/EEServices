@@ -27,10 +27,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/add-article": [
+    "/admin": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/add-article.js"
+      "static/chunks/pages/admin.js"
+    ],
+    "/admin/add-article": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/admin/add-article.js"
+    ],
+    "/admin/manage-articles": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/admin/manage-articles.js"
+    ],
+    "/resources": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/resources.js"
     ]
   },
   "ampFirstPages": []

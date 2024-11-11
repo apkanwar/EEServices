@@ -6,10 +6,16 @@ export function AuthProvider({ children }) {
     const [isAuthorized, setIsAuthorized] = useState(false);
 
     useEffect(() => {
-        // Check if the user is already authorized
         const auth = localStorage.getItem('isAuthorized');
-        if (auth === 'true') {
+        const expiration = localStorage.getItem('authExpiration');
+        const now = new Date().getTime();
+
+        if (auth === 'true' && expiration && now < Number(expiration)) {
             setIsAuthorized(true);
+        } else {
+            localStorage.removeItem('isAuthorized');
+            localStorage.removeItem('authExpiration');
+            setIsAuthorized(false);
         }
     }, []);
 
@@ -17,6 +23,11 @@ export function AuthProvider({ children }) {
         const correctPassword = process.env.NEXT_PUBLIC_ADMIN_EDITOR_PASSWORD || 'your-password';
         if (password === correctPassword) {
             localStorage.setItem('isAuthorized', 'true');
+            
+            // Set Expiration Time
+            const expirationTime = new Date().getTime() + 360 * 60 * 1000; // 12 Hrs in Milliseconds
+            localStorage.setItem('authExpiration', expirationTime.toString());
+            
             setIsAuthorized(true);
             return true;
         }
@@ -25,6 +36,7 @@ export function AuthProvider({ children }) {
 
     const logout = () => {
         localStorage.removeItem('isAuthorized');
+        localStorage.removeItem('authExpiration');
         setIsAuthorized(false);
     };
 

@@ -13,6 +13,7 @@ export default function ArticleEditor() {
     const [selectedFile, setSelectedFile] = useState(null);
     const [selectedFileText, setSelectedFileText] = useState("Click to upload or drag and drop");
     const [status, setStatus] = useState(null);
+    const [loading, setLoading] = useState(false); // New loading state
 
     const handleFile = (e) => {
         const file = e.target.files[0];
@@ -51,31 +52,33 @@ export default function ArticleEditor() {
     };
 
     const handleSubmit = async () => {
-        const resumeURL = selectedFile ? await uploadFileToStorage(selectedFile) : '';
-        const htmlContent = blocks.map(({ type, content }) => {
-            if (type === 'heading') return `<h4>${content}</h4>`;
-            if (type === 'paragraph') return `<p>${content}</p>`;
-            if (type === 'list') return `<ul style="list-style: disc; margin-left: 24px">${content.split(", ").map(item => `<li>${item.trim()}</li>`).join('')}</ul>`;
-            return '';
-        }).join('');
+        setLoading(true);
+        try {
+            const resumeURL = selectedFile ? await uploadFileToStorage(selectedFile) : '';
+            const htmlContent = blocks.map(({ type, content }) => {
+                if (type === 'heading') return `<h4>${content}</h4>`;
+                if (type === 'paragraph') return `<p>${content}</p>`;
+                if (type === 'list') return `<ul style="list-style: disc; margin-left: 24px">${content.split(", ").map(item => `<li>${item.trim()}</li>`).join('')}</ul>`;
+                return '';
+            }).join('');
 
-        if (title === '' || resumeURL === '' || htmlContent === '') {
-            setStatus({ type: "error", message: "Some fields are empty. Please check again."});
-        } else {
-            const articleData = {
-                title,
-                image: resumeURL,
-                type: articleType.value,
-                content: htmlContent,
-            };
-
-            try {
+            if (title === '' || resumeURL === '' || htmlContent === '') {
+                setStatus({ type: "error", message: "Some fields are empty. Please check again." });
+            } else {
+                const articleData = {
+                    title,
+                    image: resumeURL,
+                    type: articleType.value,
+                    content: htmlContent,
+                };
                 await saveToFireBase(articleData, 'articles');
                 setStatus({ type: "success", message: "Article uploaded successfully!" });
                 resetForm();
-            } catch (error) {
-                setStatus({ type: "error", message: "Failed to upload article. Please try again." });
             }
+        } catch (error) {
+            setStatus({ type: "error", message: "Failed to upload article. Please try again." });
+        } finally {
+            setLoading(false); // Set loading back to false after the process completes
         }
     };
 
@@ -170,6 +173,18 @@ export default function ArticleEditor() {
                 </Droppable>
             </DragDropContext>
 
+            {/* Loading Indicator */}
+            {loading &&
+                <div className={`flex gap-4 p-4 items-center border rounded-lg bg-gray-800 text-white border-white`}>
+                    <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white">
+                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                            Loading...
+                        </span>
+                    </div>
+                    Processing
+                </div>
+            }
+
             {status && (
                 <div className={`p-4 mt-8 border rounded-lg ${status.type === "success" ? "bg-green-100 text-green-700 border-green-700" : "bg-red-100 text-red-700 border-red-700"}`}>
                     {status.message}
@@ -178,8 +193,8 @@ export default function ArticleEditor() {
 
             {/* Submit Button */}
             <div className="flex justify-center mt-6">
-                <button onClick={handleSubmit} className="hover-button !bg-green-500 hover:!bg-green-800">
-                    Submit Article
+                <button onClick={handleSubmit} className="hover-button !bg-green-500 hover:!bg-green-800" disabled={loading}>
+                    {loading ? 'Submitting...' : 'Submit Article'}
                 </button>
             </div>
         </div>

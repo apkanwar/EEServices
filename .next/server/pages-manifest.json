@@ -2,6 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/add-article": "pages/add-article.js"
+  "/admin/manage-articles": "pages/admin/manage-articles.js",
+  "/resources": "pages/resources.js",
+  "/admin/add-article": "pages/admin/add-article.js",
+  "/admin": "pages/admin.js",
+  "/": "pages/index.js"
 }

@@ -4,14 +4,18 @@ import { useEffect } from 'react';
 
 export default function withAuth(Component) {
     return function ProtectedRoute(props) {
-        const { isAuthorized } = useAuth();
+        const { isAuthorized, logout } = useAuth();
         const router = useRouter();
 
         useEffect(() => {
-            if (!isAuthorized) {
-                router.push('/login'); // Redirect to login if not authorized
+            const expiration = localStorage.getItem('authExpiration');
+            const now = new Date().getTime();
+
+            if (!isAuthorized || (expiration && now >= Number(expiration))) {
+                logout();
+                router.push('/login');
             }
-        }, [isAuthorized, router]);
+        }, [isAuthorized, router, logout]);
 
         return isAuthorized ? <Component {...props} /> : null;
     };

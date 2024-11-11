@@ -4,7 +4,7 @@ import WipeButton from "./wipeButton";
 
 const HeadingBanner = ({ title, buttonInfo }) => {
     return (
-        <div className="relative bg-plum shadow-xl !bg-cover" style={{ background: `url("PlumBG.png")` }}>
+        <div className="relative bg-plum shadow-xl !bg-cover" style={{ background: `url("/PlumBG.png")` }}>
             <TopBar />
             <Navbar color="transparent" />
             <div className="flex flex-col gap-4 md:flex-row justify-between bg-transparent mx-8 xl:mx-[180px] px-4 backdrop-blur-sm py-8 lg:pt-20 lg:pb-10">
