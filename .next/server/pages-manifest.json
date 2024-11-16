@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/admin/manage-staffing-requests": "pages/admin/manage-staffing-requests.js",
   "/admin/manage-articles": "pages/admin/manage-articles.js",
-  "/resources": "pages/resources.js",
-  "/admin/add-article": "pages/admin/add-article.js",
+  "/login": "pages/login.js",
   "/admin": "pages/admin.js",
-  "/": "pages/index.js"
+  "/admin/manage-resumes": "pages/admin/manage-resumes.js"
 }

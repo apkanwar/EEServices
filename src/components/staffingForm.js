@@ -71,6 +71,7 @@ export default function StaffingForm() {
             await saveToFireBase(formData, 'staffingRequests');
             console.log("Data successfully saved to Firestore.");
             setStatus({ type: "success", message: "Data successfully saved!" });
+            e.target.reset();
         } catch (error) {
             console.error("Failed to save data: ", error.message);
             setStatus({ type: "error", message: "Failed to save data. Please try again." });

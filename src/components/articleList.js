@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { db } from '@/lib/firebaseConfig';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { SvgIcon } from '@mui/material';
+import { TrashIcon } from '@heroicons/react/20/solid';
 
 export default function ArticlesList() {
     const [articles, setArticles] = useState([]);
@@ -39,21 +41,29 @@ export default function ArticlesList() {
     return (
         <div className="p-6 max-w-4xl mx-auto">
             {loading ? (
-                <p>Loading...</p>
+                <div className={`flex gap-4 p-4 items-center border rounded-lg bg-gray-800 text-white border-white`}>
+                    <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white">
+                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                            Loading...
+                        </span>
+                    </div>
+                    Processing
+                </div>
             ) : error ? (
-                <p className="text-red-500">{error}</p>
+                <div className={`p-4 mt-8 border rounded-lg bg-red-100 text-red-700 border-red-700`}>
+                    {error}
+                </div>
             ) : articles.length === 0 ? (
-                <p>No articles found.</p>
+                <p>No Articles Found</p>
             ) : (
                 <ul className="space-y-4">
                     {articles.map((article) => (
                         <li key={article.id} className="flex justify-between items-center p-4 bg-gray-100 rounded shadow">
                             <span>{article.title}</span>
-                            <button
-                                onClick={() => handleDelete(article.id)}
-                                className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600"
-                            >
-                                Delete
+                            <button onClick={() => handleDelete(article.id)}>
+                                <SvgIcon className="text-red-500" aria-label="trash icon">
+                                    <TrashIcon />
+                                </SvgIcon>
                             </button>
                         </li>
                     ))}

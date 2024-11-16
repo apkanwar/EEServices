@@ -25,7 +25,7 @@ export default function TopBar() {
         <div className='flex flex-row font-headings'>
           <div className="flex flex-row text-custom-black items-center hover:bg-dark-ab transition-all cursor-pointer py-2.5 px-4">
             <Phone style={{ fontSize: 28 }} className="mr-2" />
-            <div className='leading-none'>(917) 443-9971</div>
+            <div className='leading-none'>(647) 913-0832</div>
           </div>
           <div className="flex flex-row text-custom-black items-center hover:bg-dark-ab transition-all cursor-pointer py-2.5 px-4">
             <Email style={{ fontSize: 28 }} className="mr-2" />

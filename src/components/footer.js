@@ -47,7 +47,7 @@ export default function Footer() {
                             <Email style={{ fontSize: 28 }} className="mr-2" />
                         </div>
                         <div className="flex flex-col text-gray-500 gap-4 dark:text-white">
-                            <div>(917) 443-9971</div>
+                            <div>(647) 913-0832</div>
                             <a href="mailto:ensuredemployment@gmail.com">Email Us</a>
                         </div>
                     </div>
