@@ -93,7 +93,9 @@ export default function EmployeeForm() {
             await saveToFireBase(formData, 'resumes');
             console.log("Data successfully saved to Firestore.");
             setStatus({ type: "success", message: "Data successfully saved!" });
-
+            e.target.reset();
+            setSelectedFile(null);
+            setSelectedFileText("Click to upload or drag and drop");
         } catch (error) {
             console.error("Failed to save data: ", error.message);
             setStatus({ type: "error", message: "Failed to save data. Please try again." });

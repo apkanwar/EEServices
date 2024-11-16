@@ -26,7 +26,8 @@ export default function Footer() {
 
                 <div className="flex flex-col gap-5 lg:gap-2">
                     <div className="text-2xl font-medium text-gray-900 dark:text-artic-blue text-center">
-                        &#169; 2024 <span className='xl:hidden'><br /></span>Ensured Employment
+                        <Link href={'/admin'} className='cursor-default'>&#169; </Link>
+                        2024 <span className='xl:hidden'><br /></span>Ensured Employment
                     </div>
                     <hr className="w-8 h-0.5 mx-auto mb-1 bg-gray-700 border-0 rounded dark:bg-white" />
                     <div className="text-xl font-normal text-gray-500 dark:text-gray-400 inline-block lg:pl-6">
@@ -46,7 +47,7 @@ export default function Footer() {
                             <Email style={{ fontSize: 28 }} className="mr-2" />
                         </div>
                         <div className="flex flex-col text-gray-500 gap-4 dark:text-white">
-                            <div>(917) 443-9971</div>
+                            <div>(647) 913-0832</div>
                             <a href="mailto:ensuredemployment@gmail.com">Email Us</a>
                         </div>
                     </div>
